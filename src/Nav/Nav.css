@@ -1,0 +1,10 @@
+.nav-container {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.nav-container a {
+	width: 33%;
+	margin: 0;
+	display: inline-block;
+}

@@ -4,19 +4,18 @@ import { MonacoEditor } from 'react-monaco-editor-ts';
 import  './ItemDetail.css';
 
 export class ItemDetail extends React.Component {
-	public props: any;
+	public props: Readonly<AppRoot.ItemDetail.Props>;
 
-	constructor (props: any) {
+	constructor (props: Readonly<AppRoot.ItemDetail.Props>) {
 		super(props);
 		this.handleNavClick = this.handleNavClick.bind(this);
 	}
 
 	public editorDidMount(editor: any, monaco: any) {
-		console.log('editorDidMount', editor);
 		editor.focus();
 	}
 	public onChange(newValue: any, e: any) {
-		console.log('onChange', newValue, e);
+		// onChange
 	}
 
 	public handleNavClick(currentKey?: string, currentKeyIndex?: number): void {
@@ -40,6 +39,7 @@ export class ItemDetail extends React.Component {
 					theme="vs-dark"
 					onChange={this.onChange}
 					editorDidMount={this.editorDidMount}
+					value={this.props.code}
 				/>
 			</div>
 		)

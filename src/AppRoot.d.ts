@@ -1,3 +1,4 @@
+
 declare namespace AppRoot {
 
 	interface State {
@@ -13,6 +14,7 @@ declare namespace AppRoot {
 			index: number;
 			displayName: string;
 			description: string;
+			code: string;
 		}
 	}
 
@@ -25,6 +27,12 @@ declare namespace AppRoot {
 			currentIndex: number;
 		}
 
+	}
+
+	interface ExampleData {
+		displayName: string;
+		description: string;
+		code: string;
 	}
 
 }

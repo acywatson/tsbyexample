@@ -51,6 +51,7 @@ class App extends React.Component {
 				  index={this.state.currentKeyIndex}
 				  displayName={exampleData[this.state.currentKey].displayName}
 				  description={exampleData[this.state.currentKey].description}
+				  code={exampleData[this.state.currentKey].code}
 				/>
 			  )
 			  : (list)}

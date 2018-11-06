@@ -1,4 +1,9 @@
-.detail-container {
+.detail-container p {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	text-align: left;
 }
 
 .react-monaco-editor-container {

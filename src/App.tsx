@@ -3,6 +3,7 @@ import './App.css';
 import { ListItem } from './ListItem/ListItem';
 import { exampleData } from './fixtures';
 import logo from './Typescript.svg';
+import githubLogo from './Github.png';
 import  { ItemDetail } from './ItemDetail/ItemDetail';
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
   }
 
   public render(): JSX.Element {
+  	const repoUrl = 'https://github.com/acywatson/tsbyexample';
   	const list = this.keys.map((key, idx) => {
   		return <ListItem
 			onClick={this.handleItemClick}
@@ -41,7 +43,8 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">TypeScript By Example</h1>
-        </header>
+		  <a className="repo-link" href={repoUrl}><img src={githubLogo} className="github-logo" alt="github-logo" /></a>
+		</header>
 		  {this.state.currentKey ?
 			  (
 				<ItemDetail

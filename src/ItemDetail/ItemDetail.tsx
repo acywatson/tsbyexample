@@ -24,6 +24,11 @@ export class ItemDetail extends React.Component {
 
 	public render(): JSX.Element {
 		// const code = "SOme code!";
+		const options = {
+			minimap: {
+				enabled: false
+			}
+		};
 		return (
 			<div className="detail-container">
 				<Nav
@@ -35,6 +40,9 @@ export class ItemDetail extends React.Component {
 				<h1>{this.props.displayName}</h1>
 				<p>{this.props.description}</p>
 				<MonacoEditor
+					width="50%"
+					height="80%"
+					options={options}
 					language="typescript"
 					theme="vs-dark"
 					onChange={this.onChange}

@@ -34,8 +34,7 @@ let ursus: Animal = Animal.Bear //3`
 	'82454DCD-6E49-44A4-92DD-016074C8F1ED': {
 		displayName: 'Any',
 		description: `Any represents a variable whose type is unknown.  The compiler ignores these during type-checking.
-		These can be useful when getting started with TypeScript, as they allow you to compile without typing everything.
-		Note that untyped variables are implicitly of type 'any'`,
+		These can be useful when getting started with TypeScript, as they allow you to compile without typing everything.`,
 		code: `let something: any = 42;
 let anotherThing: number = 42;
 let someThings: any[] = [42, 'hello', true];

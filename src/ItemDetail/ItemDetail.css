@@ -7,6 +7,8 @@
 }
 
 .react-monaco-editor-container {
-	min-height: 500px;
+	min-height: 300px;
 	text-align: left;
+	margin: auto;
+	border: 2px solid #000000;
 }

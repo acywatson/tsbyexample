@@ -7,8 +7,11 @@ let num: number = 156;
 let str: string = 'Hello, World!';`
 	},
 	'80F37DF6-638A-4C69-AF52-44A255A0A873': {
-		displayName: 'Arrays',
-		description: 'This is about arrays in TypeScript',
-		code: `let basicStringArr: string[] = ['Hello', 'World'];`
+		displayName: 'Arrays and Tuples',
+		description: `Array types can be written with square brackets or a generic. 
+The Tuple type represents an array with a fixed number of elements that don't have to be the same type.`,
+		code: `let bracketsStringArr: string[] = ['Hello', 'World'];
+let genericStringArr: Array<string> = ['Hello', 'World'];
+let tuple: [string, number, boolean] = ['Hello', 1, false];`
 	}
 };

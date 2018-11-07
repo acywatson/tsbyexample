@@ -1,35 +1,23 @@
 export let exampleData: {[key: string]: AppRoot.ExampleData} = {
 	'FE3A6926-C32C-4597-82D2-961AC8F5710A': {
-		displayName: 'Primitives',
-		description: 'Primitive types include booleans, numbers, and strings - these are easy to express in Typescript.',
+		displayName: 'Variables',
+		description: 'Variables in TypeScript can be declared with an explicit type. This allows the compiler to ensure that only valid operations are performed on that variable.',
 		code: `let bool: boolean = true;
 let num: number = 156;
-let str: string = 'Hello, World!';`
-	},
-	'80F37DF6-638A-4C69-AF52-44A255A0A873': {
-		displayName: 'Arrays and Tuples',
-		description: `Array types can be written with square brackets or a generic.
-		The Tuple type represents an array with a fixed number of elements that don't have to be the same type.`,
-		code: `let bracketsStringArr: string[] = ['Hello', 'World'];
-let genericStringArr: Array<string> = ['Hello', 'World'];
-let tuple: [string, number, boolean] = ['Hello', 1, false];`
-	},
-	'0CABCBBE-6F4B-49CC-A620-DAECA50A9797': {
-		displayName: 'Enums',
-		description: `Enums are essentially arrays of numbers with prettier names.
-		They begin at 0, by default, but you can assign any value you want to each individual entry.`,
-		code: `enum Character {'Rick', 'Morty', 'Summer'}
-let characterIndex: Character = Character.Rick //0
-let characterName: string = Character[2] //Summer
+let str: string = 'Hello, World!';
+let arr: string[] = ['Hello', 'World'];
+let tuple: [string, number] = ['Hello', 42];
 
-enum Animal {'Fish'=2, 'Bear', 'Kangaroo'=6}
-let fishy: Animal = Animal.Fish //2
-let ursus: Animal = Animal.Bear //3`
-	},
-	'D734FB93-2FA2-43E6-A085-7DFE01EE773D': {
-		displayName: 'Objects',
-		description: ``,
-		code: ``
+bool = 'true'; //error
+Math.ceil(str); //error
+
+arr.push(42); //error - can't add a number to an array of strings;
+arr.push('42'); //works!
+
+tuple[1] = 'World'; //error - the entry at index 1 must be a number;
+tuple[2] = 42; //works! indices with unspecified types can be any of the types included in the tuple.
+tuple[2] = true;
+`
 	},
 	'82454DCD-6E49-44A4-92DD-016074C8F1ED': {
 		displayName: 'Any',
@@ -45,6 +33,23 @@ someThings[2] = 125`
 	},
 	'1360A38B-5A3E-4ABD-9C37-466F73303940': {
 		displayName: 'Void, Null, and Undefined',
+		description: ``,
+		code: ``
+	},
+	'0CABCBBE-6F4B-49CC-A620-DAECA50A9797': {
+		displayName: 'Enums',
+		description: `Enums are essentially arrays of numbers with prettier names.
+		They begin at 0, by default, but you can assign any value you want to each individual entry.`,
+		code: `enum Character {'Rick', 'Morty', 'Summer'}
+let characterIndex: Character = Character.Rick //0
+let characterName: string = Character[2] //Summer
+
+enum Animal {'Fish'=2, 'Bear', 'Kangaroo'=6}
+let fishy: Animal = Animal.Fish //2
+let ursus: Animal = Animal.Bear //3`
+	},
+	'D734FB93-2FA2-43E6-A085-7DFE01EE773D': {
+		displayName: 'Objects',
 		description: ``,
 		code: ``
 	},

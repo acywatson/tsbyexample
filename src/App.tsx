@@ -10,7 +10,7 @@ class App extends React.Component {
   public state: Readonly<AppRoot.State>;
   public keys: string[] = Object.keys(exampleData);
 
-  constructor(props: any) {
+  constructor(props: Readonly<{}>) {
   	super(props);
   	this.state = {
   		currentKey: null,

@@ -50,8 +50,14 @@ someThings[2] = 125`
 	},
 	'DD8F48D2-216B-4542-A2AF-394FC73B9BBA': {
 		displayName: 'Type Assertion',
-		description: ``,
-		code: ``
+		description: `Type assertions are a way of casting a value. This can be used when you know more about a value than
+		 TypeScript does. Typically this is used to turn something that is more generic to something more specific. This
+		 can be done by using "angle-brackets" or "as" syntax.`,
+		code: `let genericData: any = '4.6692';
+// Here we use "angle-brackets".
+let ceilingNumber: number = Math.ceil(<number>genericData);
+// Here we use "as" syntax.
+let stringLength: number = (genericData as string).length;`
 	},
 	'85D9EBA4-91B9-4AEA-9CD7-84365543531C': {
 		displayName: 'Type Inference',

@@ -4,22 +4,22 @@ import './Nav.css';
 export class Nav extends React.Component {
 	public props: Readonly<AppRoot.Nav.Props>;
 
-	constructor(props: any) {
+	constructor(props: AppRoot.Nav.Props) {
 		super(props);
 		this.handlePrevClick = this.handlePrevClick.bind(this);
 		this.handleReturnClick = this.handleReturnClick.bind(this);
 		this.handleNextClick = this.handleNextClick.bind(this);
 	}
 
-	public handlePrevClick() {
+	public handlePrevClick(): void {
 		this.props.handleNavClick(this.props.previousId, this.props.currentIndex - 1);
 	}
 
-	public handleReturnClick() {
+	public handleReturnClick(): void {
 		this.props.handleNavClick();
 	}
 
-	public handleNextClick() {
+	public handleNextClick(): void {
 		this.props.handleNavClick(this.props.nextId, this.props.currentIndex + 1);
 	}
 

@@ -1,10 +1,12 @@
 import * as React from 'react';
-import './App.css';
 import { ListItem } from './ListItem/ListItem';
 import { exampleData } from './fixtures';
+import  { ItemDetail } from './ItemDetail/ItemDetail';
+
+import './App.css';
+
 import logo from './Typescript.svg';
 import githubLogo from './Github.png';
-import  { ItemDetail } from './ItemDetail/ItemDetail';
 
 class App extends React.Component {
   public state: Readonly<AppRoot.State>;
@@ -45,6 +47,16 @@ class App extends React.Component {
           <h1 className="App-title">TypeScript By Example</h1>
 		  <a className="repo-link" href={repoUrl}><img src={githubLogo} className="github-logo" alt="github-logo" /></a>
 		</header>
+		  {!this.state.currentKey &&
+			  <div className="about-ts">
+					<p>
+						TypeScript is a statically-typed superset of JavaScript that compiles to plain JavaScript.
+						It combines the familiarity and ease-of-use of JavaScript with the readability and scalability of
+						a compiled language.
+					</p>
+				  <hr/>
+			  </div>
+		  }
 		  {this.state.currentKey ?
 			  (
 				<ItemDetail

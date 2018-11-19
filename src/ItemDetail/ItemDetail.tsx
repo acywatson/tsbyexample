@@ -23,7 +23,6 @@ export class ItemDetail extends React.Component {
 	}
 
 	public render(): JSX.Element {
-		// const code = "SOme code!";
 		const options = {
 			minimap: {
 				enabled: false
